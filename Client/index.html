@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title>Heroes</title>
+
+
+        <script src="lib/jquery-1.8.2.min.js"></script>
+        <link href="heroes.css" rel="stylesheet" />
+
+        <script>
+
+            var Engine;
+
+            $(document).ready(function () {
+
+                Engine = new Engine();
+
+                Engine.start();
+
+            });
+
+        </script>
+    </head>
+    <body>
+
+        <div id="loader">
+            <img src="images/ui/loading.gif" /><br />
+            <div id="loader_details">
+
+            </div>
+        </div>
+
+        <div id="window" style="height: 100%;">
+            <table width="100%" style="height: 100%;" border="0">
+                <tr>
+                    <td align="center" valign="middle">
+                        <table border="0" cellpadding="0" cellspacing="0" id="border_table">
+                            <tr>
+                                <td class="top left"></td>
+                                <td class="top"></td>
+                                <td class="top right"></td>
+                            </tr>
+                            <tr>
+                                <td class="left"></td>
+                                <td colspan="1" rowspan="1" id="viewport" style="font-size: 0px;"><canvas id="canvas"></canvas></td>
+                                <td class="right"></td>
+                            </tr>
+                            <tr>
+                                <td class="bottom left"></td>
+                                <td class="bottom"></td>
+                                <td class="bottom right"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="chat">
+            <div id="chat_output">
+            </div>
+            <div id="chat_input">
+                <input type="text" />
+            </div>
+
+            <div id="chat_msg" class="chat_msg">
+                <table>
+                    <tr>
+                        <td class="chat_msg_username" valign="top"></td>
+                        <td class="chat_msg_divider" valign="top">:</td>
+                        <td class="chat_msg_body" valign="top"></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div id="login">
+            <div id="username_box"><input type="text" value="mwardrop" id="login_username" /></div>
+            <div id="password_box"><input type="password" value="test" id="login_password" /></div>
+            <div id="login_button">&nbsp;</div>
+        </div>
+
+        <div id="modal">
+            <div id="notification">
+                <div id="title"></div>
+                <div id="msg"></div>
+            </div>
+        </div>
+
+        <div id="avatar_button">
+            <img id="avatar" src="images/avatars/1_large.png" />
+        </div>
+
+        <div id="editor">
+            <span id="editor_handle"></span>
+            <select id="editor_control">
+                <option value="map">Map Editor</option>
+                <option value="player">Player Editor</option>
+                <option value="event">Event Editor</option>
+                <option value="options">Options Editor</option>
+                <option value="close">Close Editor</option>
+            </select>
+            <div id="map_editor" style="display: none;">
+                <select id="map_editor_control">
+                    <option value="background">Background</option>
+                    <option value="terrain">Terrain</option>
+                    <option value="foreground">Foreground</option>
+                    <option value="passable">Passable</option>
+                </select>
+                <div id="map_background_editor">
+
+                </div>
+                <div id="map_terrain_editor">
+
+                </div>
+                <div id="map_foreground_editor" style="display: none;">
+
+                </div>
+                <div id="map_passable_editor" style="display: none;">
+
+                </div>
+            </div>
+            <div id="player_editor" style="display: none;">
+                Player Editor
+            </div>
+            <div id="event_editor" style="display: none;">
+                Event Editor
+            </div>
+            <div id="options_editor">
+                <button>Save Map State</button>
+                <button>Load Map State</button>
+                <hr />
+                <button>Save Player State</button>
+                <button>Load Player State</button>
+            </div>
+        </div>
+
+        <div id="editor_button">
+            &nbsp;
+        </div>
+    </body>
+            <script src='/socket.io/socket.io.js'></script>
+        
+        <script src="lib/jquery-ui-1.9.0.custom.min.js"></script>
+        <script src="js/Engine.js"></script>
+        <script src="js/Network.js"></script>
+        <script src="js/UserInterface.js"></script>
+        <script src="js/Map.js"></script>
+        <script src="js/User.js"></script>
+        <script src="js/Mouse.js"></script>
+        <script src="js/Editor.js"></script>
+        <script src="js/Chat.js"></script>
+</html>

@@ -1,0 +1,265 @@
+﻿html, body {
+    background-color: #000;
+    color: #fff; 
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    cursor: url('images/ui/mouse_cursor.png'), -moz-zoom-in;
+}
+
+.left, .right, .top, .bottom {
+    width: 32px;
+    height: 32px;   
+}
+
+#window {
+    display: none;
+}
+#login {
+    display:none; 
+    position: absolute; 
+    width: 290px; 
+    height: 192px; 
+    background-image: url('images/ui/login.png');
+}
+
+#username_box {
+    position: relative; 
+    left: 98px; 
+    top: 88px; 
+    width: 173px; 
+    height: 17px;
+}
+
+#username_box > input {
+    background-color: transparent; 
+    border: 0px; 
+    color: white; 
+    width: 173px;
+}
+
+#password_box {
+    position: relative; 
+    left: 98px; 
+    top: 100px; 
+    width: 173px; 
+    height: 17px;
+}
+
+#password_box > input {
+    background-color: transparent; 
+    border: 0px; 
+    color: white; 
+    width: 173px;
+}
+
+#login_button {
+    position: relative; 
+    left: 205px; 
+    top: 122px; 
+    width: 65px; 
+    height: 25px; 
+    cursor: pointer;
+}
+
+#notification {
+    position: absolute; 
+    width: 289px; 
+    height: 192px; 
+    background-image: url('images/ui/notification.png');
+}
+
+#notification > #title {
+    position: relative;
+    top: 25px;
+    left: 22px;
+    height: 17px;
+    width: 245px;
+    padding-left: 4px;
+    color: red;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#notification > #msg {
+    position: relative;
+    top: 35px;
+    width: 241px;
+    left: 22px;
+    height: 110px;
+    overflow-y: scroll;
+    font-size: 13px;
+    padding: 4px;
+}
+
+#modal {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/ui/notification_background.png');
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    z-index: 1000;
+}
+
+#avatar_button {
+    width: 47px;
+    height: 51px;
+    position: absolute;
+    display: none;
+    background-image: url('images/ui/avatar_button.png');
+    padding-left: 4px;
+    padding-top: 4px;
+}
+
+#avatar {
+    width: 41px;
+    height: 45px;
+}
+
+#editor {
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    left: 65px;
+    top: 160px;
+    background-image: url('images/ui/notification_background.png');
+    border: 5px solid black;
+    display: none;
+}
+
+#editor select {
+    width: 100%;
+}
+
+#editor_button {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background-image: url('images/ui/editor_button.png');
+    left: 100px;
+    top: 100px;
+    display: none;
+}
+
+#map_background_editor {
+    display: none; 
+    overflow-y: scroll; 
+    width: 100%; 
+    height: 235px; 
+    background-color: #282828; 
+    margin-top: 3px; 
+    text-align: center;
+}
+
+#map_terrain_editor {
+    display: none; 
+    overflow-y: scroll; 
+    width: 100%; 
+    height: 235px; 
+    background-color: #282828; 
+    margin-top: 3px; 
+    text-align: center;
+}
+
+.editor_background_tile {
+    margin: 1px;
+    padding: 1px;
+    border: 1px solid grey;
+}
+
+.editor_background_tile_selected {
+    border: 1px solid red;
+}
+
+#editor_handle {
+    background-color: #595959; 
+    height: 10px; 
+    width: 100%; 
+    color: white; 
+    display: block; 
+    margin-bottom: 3px;
+}
+
+#options_editor {
+    margin-top: 3px;
+    display: none; 
+    overflow-y: scroll; 
+    width: 100%; 
+    height: 254px; 
+    background-color: #282828; 
+    text-align: center;
+    padding-top: 5px;
+}
+
+#options_editor > button {
+    width: 120px;
+}
+
+#chat {
+    position: absolute; 
+    max-width: 500px;
+    display: none;
+}
+
+#chat_output {
+    border-radius: 3px;
+    height: 50px;
+    background-image: url('images/ui/notification_background.png');
+    display: none;
+    font-size: 10px;
+    padding: 2px;
+    font-weight: lighter;
+    color: #d9d9d9;
+    overflow: hidden;
+}
+
+#chat_input {
+    margin-top: 5px;
+    background-image: url('images/ui/notification_background.png');
+    display: none;
+    font-size: 10px;
+    font-weight: lighter;
+    border-radius: 3px;
+}
+
+#chat_input > input {
+    background: transparent;   
+    border: none; 
+    color: #fff;
+    font-size: 10px;
+    font-weight: lighter;
+    width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#chat_msg {
+    display: none;
+
+}
+
+.chat_msg {
+
+}
+
+.chat_msg_username {
+    color: #0094ff;
+}
+.chat_msg_username_self {
+    color: #b6ff00;
+}
+
+.chat_msg_username_server {
+    color: red;
+}
+
+#loader {
+    text-align: center; 
+    margin-top: 50px;
+    font-size: 12px;
+    color: #d9d9d9;
+}
